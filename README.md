@@ -19,7 +19,7 @@ D-OPF
 
 ## Execution
 
-The following procedure will give the JSON files required to moel OPF for a distribution network
+The following procedure will give the JSON files required to model OPF for a distribution network
 
 1. Clone the D-OPF repository
     ```console
