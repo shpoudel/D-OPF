@@ -6,7 +6,7 @@ This repository contains a toolbox for Distribution Optimal Power Flow (D-OPF) A
 The following is the recommended structure for extracting data from OpenDSS file:
 
 ```console
-.
+D-OPF
 ├── D-NET
 │   └── network_model.py
 │   └── Printed JSON files
@@ -23,13 +23,15 @@ The following procedure will give the JSON files required to moel OPF for a dist
 
 1. Clone the D-OPF repository
     ```console
-    git clone https://github.com/shpoudel/D-OPF
-    cd D-OPF
+    C:\....\> git clone https://github.com/shpoudel/D-OPF
+    C:\....\> cd D-OPF
+    C:\....\D-OPF>
     ```
 1. Run the network_model.py
     ```console
-    cd D-NET
-    python network_model.py file_type
+    C:\....\D-OPF> cd D-Net
+    C:\....\D-OPF\D-Net>
+    C:\....\D-OPF\D-Net> python network_model.py file_type
     
     Note: file_type can be 'JSON' or 'TXT'
     ```
