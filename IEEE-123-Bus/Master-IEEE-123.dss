@@ -1,0 +1,31 @@
+Clear
+
+New Circuit.ieee123
+
+~ basekv=2.4 pu=1.0 phases=1 bus1=150  
+~ Angle=0                                                       ! advance angle 30 deg so result agree with published angle
+~ MVAsc3=2000000 MVASC1=21000000    ! stiffen the source to approximate inf source
+
+
+
+Redirect LineCode.dss
+
+Redirect IEEE-123-Line.dss
+Redirect IEEE-123-Load.dss
+
+New "Transformer.reg1a" windings=2 Xhl=0.001 %loadloss=1E-005 ppm_antifloat=0 phases=1 conns=[wye, wye, ] buses=[150, 150r, ] kVs=[2.4018, 2.4018, ] kVAs=[1666.7, 1666.7, ] normhkVA=1833.3 emerghkVA=2500
+New "RegControl.creg1a" transformer=reg1a winding=2 tapwinding=2 vreg=120 band=2 ptratio=20 CTprim=700 R=3 X=7.5
+
+
+
+New generator.c83 bus1 = 83 phases=1 kv=2.4018 kw =0.0001 kvar =200
+New generator.c88 bus1 = 88 phases=1 kv=2.4018 kw =0.0001 kvar =16.667
+New generator.c90 bus1 = 90 phases=1 kv=2.4018 kw =0.0001 kvar =16.667
+New generator.c92 bus1 = 92 phases=1 kv=2.4018 kw =0.0001 kvar =16.667
+
+
+set loadmult = 1
+
+Set Voltagebases=[ 4.16, .48]
+calcv
+

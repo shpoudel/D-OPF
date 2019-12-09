@@ -1,0 +1,133 @@
+New "Line.l115" bus1=149 bus2=1 length=0.4 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l1" phases=1 bus1=1 bus2=2 linecode=10 normamps=400 emergamps=600 length=0.175
+New "Line.l2" phases=1 bus1=1 bus2=3 linecode=11 normamps=400 emergamps=600 length=0.25
+New "Line.l3" bus1=1 bus2=7 length=0.3 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l4" phases=1 bus1=3 bus2=4 linecode=11 normamps=400 emergamps=600 length=0.2
+New "Line.l5" phases=1 bus1=3 bus2=5 linecode=11 normamps=400 emergamps=600 length=0.325
+New "Line.l6" phases=1 bus1=5 bus2=6 linecode=11 normamps=400 emergamps=600 length=0.25
+New "Line.l7" bus1=7 bus2=8 length=0.2 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l8" phases=1 bus1=8 bus2=12 linecode=10 normamps=400 emergamps=600 length=0.225
+New "Line.l9" phases=1 bus1=8 bus2=9 linecode=9 normamps=400 emergamps=600 length=0.225
+New "Line.l10" bus1=8 bus2=13 length=0.3 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l11" phases=1 bus1=9r bus2=14 linecode=9 normamps=400 emergamps=600 length=0.425
+New "Line.l12" phases=1 bus1=13 bus2=34 linecode=11 normamps=400 emergamps=600 length=0.15
+New "Line.l13" bus1=13 bus2=18 length=0.825 r1=0.057967 x1=0.11876 C1=2.9728 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l14" phases=1 bus1=14 bus2=11 linecode=9 normamps=400 emergamps=600 length=0.25
+New "Line.l15" phases=1 bus1=14 bus2=10 linecode=9 normamps=400 emergamps=600 length=0.25
+New "Line.l16" phases=1 bus1=15 bus2=16 linecode=11 normamps=400 emergamps=600 length=0.375
+New "Line.l17" phases=1 bus1=15 bus2=17 linecode=11 normamps=400 emergamps=600 length=0.35
+New "Line.l18" phases=1 bus1=18 bus2=19 linecode=9 normamps=400 emergamps=600 length=0.25
+New "Line.l19" bus1=18 bus2=21 length=0.3 r1=0.057967 x1=0.11876 C1=2.9728 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l20" phases=1 bus1=19 bus2=20 linecode=9 normamps=400 emergamps=600 length=0.325
+New "Line.l21" phases=1 bus1=21 bus2=22 linecode=10 normamps=400 emergamps=600 length=0.525
+New "Line.l22" bus1=21 bus2=23 length=0.25 r1=0.057967 x1=0.11876 C1=2.9728 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l23" phases=1 bus1=23 bus2=24 linecode=11 normamps=400 emergamps=600 length=0.55
+New "Line.l24" bus1=23 bus2=25 length=0.275 r1=0.057967 x1=0.11876 C1=2.9728 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l25" bus1=25r bus2=26 length=0.35 r1=0.057964 x1=0.13005 C1=5.1673 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l26" bus1=25 bus2=28 length=0.2 r1=0.057967 x1=0.11876 C1=2.9728 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l27" bus1=26 bus2=27 length=0.275 r1=0.057964 x1=0.13005 C1=5.1673 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l28" phases=1 bus1=26 bus2=31 linecode=11 normamps=400 emergamps=600 length=0.225
+New "Line.l29" phases=1 bus1=27 bus2=33 linecode=9 normamps=400 emergamps=600 length=0.5
+New "Line.l30" bus1=28 bus2=29 length=0.3 r1=0.057967 x1=0.11876 C1=2.9728 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l31" bus1=29 bus2=30 length=0.35 r1=0.057967 x1=0.11876 C1=2.9728 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l32" bus1=30 bus2=250 length=0.2 r1=0.057967 x1=0.11876 C1=2.9728 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l33" phases=1 bus1=31 bus2=32 linecode=11 normamps=400 emergamps=600 length=0.3
+New "Line.l34" phases=1 bus1=34 bus2=15 linecode=11 normamps=400 emergamps=600 length=0.1
+New "Line.l35" bus1=35 bus2=36 length=0.65 r1=0.057964 x1=0.13005 C1=5.1673 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l36" bus1=35 bus2=40 length=0.25 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l37" phases=1 bus1=36 bus2=37 linecode=9 normamps=400 emergamps=600 length=0.3
+New "Line.l38" phases=1 bus1=36 bus2=38 linecode=10 normamps=400 emergamps=600 length=0.25
+New "Line.l39" phases=1 bus1=38 bus2=39 linecode=10 normamps=400 emergamps=600 length=0.325
+New "Line.l40" phases=1 bus1=40 bus2=41 linecode=11 normamps=400 emergamps=600 length=0.325
+New "Line.l41" bus1=40 bus2=42 length=0.25 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l42" phases=1 bus1=42 bus2=43 linecode=10 normamps=400 emergamps=600 length=0.5
+New "Line.l43" bus1=42 bus2=44 length=0.2 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l44" phases=1 bus1=44 bus2=45 linecode=9 normamps=400 emergamps=600 length=0.2
+New "Line.l45" bus1=44 bus2=47 length=0.25 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l46" phases=1 bus1=45 bus2=46 linecode=9 normamps=400 emergamps=600 length=0.3
+New "Line.l47" bus1=47 bus2=48 length=0.15 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l48" bus1=47 bus2=49 length=0.25 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l49" bus1=49 bus2=50 length=0.25 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l50" bus1=50 bus2=51 length=0.25 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l51" bus1=51 bus2=151 length=0.5 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l52" bus1=52 bus2=53 length=0.2 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l53" bus1=53 bus2=54 length=0.125 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l54" bus1=54 bus2=55 length=0.275 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l55" bus1=54 bus2=57 length=0.35 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l56" bus1=55 bus2=56 length=0.275 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l57" phases=1 bus1=57 bus2=58 linecode=10 normamps=400 emergamps=600 length=0.25
+New "Line.l58" bus1=57 bus2=60 length=0.75 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l59" phases=1 bus1=58 bus2=59 linecode=10 normamps=400 emergamps=600 length=0.25
+New "Line.l60" bus1=60 bus2=61 length=0.55 r1=0.057967 x1=0.11876 C1=2.9728 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l61" bus1=60 bus2=62 length=0.25 r1=0.19209 x1=0.091521 C1=33.772 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l62" bus1=62 bus2=63 length=0.175 r1=0.19209 x1=0.091521 C1=33.772 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l63" bus1=63 bus2=64 length=0.35 r1=0.19209 x1=0.09152101 C1=33.772 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l64" bus1=64 bus2=65 length=0.425 r1=0.19209 x1=0.09152101 C1=33.772 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l65" bus1=65 bus2=66 length=0.325 r1=0.19209 x1=0.09152101 C1=33.772 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l66" phases=1 bus1=67 bus2=68 linecode=9 normamps=400 emergamps=600 length=0.2
+New "Line.l67" bus1=67 bus2=72 length=0.275 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l68" bus1=67 bus2=97 length=0.25 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l69" phases=1 bus1=68 bus2=69 linecode=9 normamps=400 emergamps=600 length=0.275
+New "Line.l70" phases=1 bus1=69 bus2=70 linecode=9 normamps=400 emergamps=600 length=0.325
+New "Line.l71" phases=1 bus1=70 bus2=71 linecode=9 normamps=400 emergamps=600 length=0.275
+New "Line.l72" phases=1 bus1=72 bus2=73 linecode=11 normamps=400 emergamps=600 length=0.275
+New "Line.l73" bus1=72 bus2=76 length=0.2 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l74" phases=1 bus1=73 bus2=74 linecode=11 normamps=400 emergamps=600 length=0.35
+New "Line.l75" phases=1 bus1=74 bus2=75 linecode=11 normamps=400 emergamps=600 length=0.4
+New "Line.l76" bus1=76 bus2=77 length=0.4 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l77" bus1=76 bus2=86 length=0.7 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l78" bus1=77 bus2=78 length=0.1 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l79" bus1=78 bus2=79 length=0.225 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l80" bus1=78 bus2=80 length=0.475 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l81" bus1=80 bus2=81 length=0.175 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l82" bus1=81 bus2=82 length=0.25 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l83" phases=1 bus1=81 bus2=84 linecode=11 normamps=400 emergamps=600 length=0.675
+New "Line.l84" bus1=82 bus2=83 length=0.25 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l85" phases=1 bus1=84 bus2=85 linecode=11 normamps=400 emergamps=600 length=0.475
+New "Line.l86" bus1=86 bus2=87 length=0.45 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l87" phases=1 bus1=87 bus2=88 linecode=9 normamps=400 emergamps=600 length=0.175
+New "Line.l88" bus1=87 bus2=89 length=0.275 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l89" phases=1 bus1=89 bus2=90 linecode=10 normamps=400 emergamps=600 length=0.25
+New "Line.l90" bus1=89 bus2=91 length=0.225 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l91" phases=1 bus1=91 bus2=92 linecode=11 normamps=400 emergamps=600 length=0.3
+New "Line.l92" bus1=91 bus2=93 length=0.225 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l93" phases=1 bus1=93 bus2=94 linecode=9 normamps=400 emergamps=600 length=0.275
+New "Line.l94" bus1=93 bus2=95 length=0.3 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l95" phases=1 bus1=95 bus2=96 linecode=10 normamps=400 emergamps=600 length=0.2
+New "Line.l96" bus1=97 bus2=98 length=0.275 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l97" bus1=98 bus2=99 length=0.55 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l98" bus1=99 bus2=100 length=0.3 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l99" bus1=100 bus2=450 length=0.8 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l118" bus1=197 bus2=101 length=0.25 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l100" phases=1 bus1=101 bus2=102 linecode=11 normamps=400 emergamps=600 length=0.225
+New "Line.l101" bus1=101 bus2=105 length=0.275 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l102" phases=1 bus1=102 bus2=103 linecode=11 normamps=400 emergamps=600 length=0.325
+New "Line.l103" phases=1 bus1=103 bus2=104 linecode=11 normamps=400 emergamps=600 length=0.7
+New "Line.l104" phases=1 bus1=105 bus2=106 linecode=10 normamps=400 emergamps=600 length=0.225
+New "Line.l105" bus1=105 bus2=108 length=0.325 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l106" phases=1 bus1=106 bus2=107 linecode=10 normamps=400 emergamps=600 length=0.575
+New "Line.l107" phases=1 bus1=108 bus2=109 linecode=9 normamps=400 emergamps=600 length=0.45
+New "Line.l108" bus1=108 bus2=300 length=1 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l109" phases=1 bus1=109 bus2=110 linecode=9 normamps=400 emergamps=600 length=0.3
+New "Line.l110" phases=1 bus1=110 bus2=111 linecode=9 normamps=400 emergamps=600 length=0.575
+New "Line.l111" phases=1 bus1=110 bus2=112 linecode=9 normamps=400 emergamps=600 length=0.125
+New "Line.l112" phases=1 bus1=112 bus2=113 linecode=9 normamps=400 emergamps=600 length=0.525
+New "Line.l113" phases=1 bus1=113 bus2=114 linecode=9 normamps=400 emergamps=600 length=0.325
+New "Line.l114" bus1=135 bus2=35 length=0.375 r1=0.057967 x1=0.11876 C1=3.1627 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l116" bus1=152 bus2=52 length=0.4 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.l117" bus1=160r bus2=67 length=0.35 r1=0.057967 x1=0.11876 C1=3.0509 phases=1 normamps=400 emergamps=600 units=none
+New "Line.sw1" bus1=150r bus2=149 length=0.001 r1=0.001 x1=0 C1=0 phases=1 normamps=400 emergamps=600 units=none
+New "Line.sw2" bus1=13 bus2=152 length=0.001 r1=0.001 x1=0 C1=0 phases=1 normamps=400 emergamps=600 units=none
+New "Line.sw3" bus1=18 bus2=135 length=0.001 r1=0.001 x1=0 C1=0 phases=1 normamps=400 emergamps=600 units=none
+New "Line.sw4" bus1=60 bus2=160 length=0.001 r1=0.001 x1=0 C1=0 phases=1 normamps=400 emergamps=600 units=none
+New "Line.sw5" bus1=97 bus2=197 length=0.001 r1=0.001 x1=0 C1=0 phases=1 normamps=400 emergamps=600 units=none
+New "Line.sw6" bus1=61 bus2=61s length=0.001 r1=0.001 x1=0 C1=0 phases=1 normamps=400 emergamps=600 units=none
+New "Line.sw7" bus1=151 bus2=300_open length=0.001 r1=0.001 x1=0 C1=0 phases=1 normamps=400 emergamps=600 units=none
+New "Line.sw8" phases=1 bus1=54 bus2=94_open r1=0.001 r0=0.001 x1=0 x0=0 C1=0 C0=0 length=0.001
+
+!New "Line.reg1a"  Phases=1 Bus1=150    Bus2=150r r1=0.0001 x1=.0001  c1=0.000 				!windings=2 Xhl=0.001 %loadloss=1E-005 ppm_antifloat=0 phases=1 conns=[wye, wye, ] buses=[150, 150r, ] kVs=[2.4018, 2.4018, ] kVAs=[1666.7, 1666.7, ] normhkVA=1833.3 emerghkVA=2500
+New "Line.xfm1"  Phases=1 Bus1=61s    Bus2=610 r1=0.0001 x1=.0001  c1=0.000 				!windings=2 Xhl=2.72 buses=[61s, 610, ] conns=[wye, wye, ] kVs=[2.4018, 0.27713, ] kVAs=[50, 50, ] taps=[1, 1, ] wdg=1 %R=0.635 wdg=2 %R=0.635 phases=1 conns=[wye, wye, ] buses=[61s, 610, ] kVs=[2.4018, 0.27713, ] kVAs=[50, 50, ] normhkVA=55 emerghkVA=75
+New "Line.reg2a"   Phases=1 Bus1=9    Bus2=9r r1=0.0001 x1=.0001  c1=0.000 				!windings=2 Xhl=0.01 %loadloss=1E-005 ppm_antifloat=0 phases=1 conns=[wye, wye, ] buses=[9, 9r, ] kVs=[2.402, 2.402, ] kVAs=[2000, 2000, ] normhkVA=2200 emerghkVA=3000
+New "Line.reg3a"   Phases=1 Bus1=25    Bus2=25r r1=0.0001 x1=.0001  c1=0.000			! windings=2 Xhl=0.01 %loadloss=1E-005 ppm_antifloat=0 phases=1 conns=[wye, wye, ] buses=[25, 25r, ] kVs=[2.402, 2.402, ] kVAs=[2000, 2000, ] normhkVA=2200 emerghkVA=3000
+New "Line.reg4a"  Phases=1 Bus1=160    Bus2=160r r1=0.0001 x1=.0001  c1=0.000 			!windings=2 Xhl=0.01 %loadloss=1E-005 ppm_antifloat=0 phases=1 conns=[wye, wye, ] buses=[160, 160r, ] kVs=[2.402, 2.402, ] kVAs=[2000, 2000, ] normhkVA=2200 emerghkVA=3000
+
