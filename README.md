@@ -18,7 +18,7 @@ The following is the recommended structure for extracting data from OpenDSS file
 
 ## Execution
 
-The following procedure will give the JSON files incl
+The following procedure will give the JSON files required to moel OPF for a distribution network
 
 1. Clone the D-OPF repository
     ```console
