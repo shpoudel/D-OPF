@@ -9,11 +9,11 @@ The following is the recommended structure for extracting data from OpenDSS file
 .
 ├── D-NET
 │   └── network_model.py
-│   └── JSON files
+│   └── Printed JSON files
 ├── IEEE-123-Bus
 │   └── DSS files
-├── README.md
-└── sample_app.config
+├── LICENSE
+└── README.md
 ```
 
 ## Execution
