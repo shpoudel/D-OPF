@@ -30,7 +30,4 @@ The following procedure will give the JSON files incl
     cd D-NET
     python network_model.py
     ```
-1. Once inside the D-Net folder
-    ```console
-    Get all JSON files
-    ```
+1. Once inside the D-Net folder, you will have the required JSON files
