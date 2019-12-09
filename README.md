@@ -17,3 +17,20 @@ The following is the recommended structure for extracting data from OpenDSS file
 ```
 
 ## Execution
+
+The following procedure will give the JSON files incl
+
+1. Clone the D-OPF repository
+    ```console
+    git clone https://github.com/shpoudel/D-OPF
+    cd D-OPF
+    ```
+1. Run the network_model.py
+    ```console
+    cd D-NET
+    python network_model.py
+    ```
+1. Once inside the D-Net folder
+    ```console
+    Get all JSON files
+    ```
