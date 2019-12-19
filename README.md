@@ -32,7 +32,11 @@ The following procedure will give the JSON/TXT files required to model OPF for a
     C:\....\D-OPF> cd D-Net
     C:\....\D-OPF\D-Net>
     C:\....\D-OPF\D-Net> python network_model.py file_type
-    
     Note: file_type can be 'JSON' or 'TXT'
+    
+    OR 
+    
+    C:\....\D-OPF\D-Net> python OpenDSS_CDF.py
+    
     ```
-1. Inside the D-Net folder, you will have the required JSON files and inside the IEEE-123-Bus folder, you will have the required TXT files.
+1. Inside the D-Net folder, you will have the required JSON files and inside the IEEE-123-Bus folder, you will have the required TXT files including the CDF format one.
