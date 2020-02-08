@@ -33,7 +33,6 @@ class Data:
 
         self.text = self.engine.Text
         self.circuit = self.engine.ActiveCircuit
-        print(self.circuit)
         self.DSSLines = self.circuit.Lines
         self.DSSXfrm = self.circuit.Transformers
         self.DSSLoad = self.circuit.Loads      
@@ -46,9 +45,10 @@ class Data:
         self.text.Command = "Show Elements"
         self.text.Command = "Show Buses"
         self.text.Command = "Export Loads"
+        self.text.Command = "Show Powers kva Elements"
 
     # Extracting the data
-    def Extract_Data(self, f1, f2, f3):
+    def Extract_Data(self, f1, f2, f3, f4):
 
         line_ind = 0    
         xfmr_ind = 0    
@@ -142,6 +142,20 @@ class Data:
                                phases = int(row[3]))
                 Load_Elements.append(message) 
 
+        # Get phases of loads. We can only get it from kVA element txt file
+        ABC = []
+        for line in f4:
+            if line.strip(): 
+                row = line.split()
+                if row[0] == 'ELEMENT':
+                    element = row[2].strip('"')
+                    element =  element.split('.')
+                    if element[0] == 'Load':
+                        line = next(f4)
+                        a = line.split()
+                        x = [element[1], a[1]]
+                        ABC.append(x)
+
         # Get the load buses. Rest buses will have None as load name and 0 power
         for el in Elements:
             row = el.split()
@@ -183,10 +197,12 @@ class Data:
                             bus_ind += 1
                             flag_l = 1
                             break         
-                        # For single phase loads in single node buses
+                        # For single phase loads 
                         if ld['phases'] == 1 and ld['bus'] != ld_1 ['bus']:   
-                            whichphase = b['phases']  
-                            whichphase = int(whichphase[0])               
+                            # If it is single phase, find where it is: A, B, or C
+                            for abc in ABC:
+                                if abc [0] == ld['name']:
+                                    whichphase = int(abc[1])              
                             kW = self.DSSLoad.kW    
                             kVAR = self.DSSLoad.kW* np.tan(math.acos(self.DSSLoad.pf))   
                             if whichphase == 1:
@@ -211,10 +227,11 @@ class Data:
                                 flag_l = 1
                                 break
                     except:
-                        # For single phase loads in single node buses
+                        # For single phase loads
                         if ld['phases'] == 1:   
-                            whichphase = b['phases']  
-                            whichphase = int(whichphase[0])               
+                            for abc in ABC:
+                                if abc [0] == ld['name']:
+                                    whichphase = int(abc[1])              
                             kW = self.DSSLoad.kW    
                             kVAR = self.DSSLoad.kW* np.tan(math.acos(self.DSSLoad.pf))   
                             if whichphase == 1:
@@ -279,10 +296,72 @@ class Data:
                     el_name = attr[1]   
                     self.DSSLines.Name = el_name
                     row[1] = str(row[1])   
-                    row[2] = str(row[2])                  
-                    file_ln.write("%d\t" %(line_ind) + "LINE " + self.DSSLines.Name.ljust(8) + "%d\t" %(self.DSSLines.Phases)+ "%.4f\t" %(self.DSSLines.Length))
-                    file_ln.write(row[1].ljust(len(longest)+5) + row[2].ljust(len(longest)+5) + "%f\t%f\n" %(self.DSSLines.Rmatrix[0], self.DSSLines.Xmatrix[0]))
-                    line_ind += 1
+                    row[2] = str(row[2]) 
+                    # 3-Phase Line                     
+                    if self.DSSLines.phases == 3:
+                        file_ln.write("%d\t" %(line_ind) + "LINE " + self.DSSLines.Name.ljust(8) + "%d\t" %(self.DSSLines.Phases)+ "%.4f\t" %(self.DSSLines.Length))
+                        file_ln.write(row[1].ljust(len(longest)+5) + row[2].ljust(len(longest)+5) + "%f\t%f\t" %(self.DSSLines.Rmatrix[0], self.DSSLines.Rmatrix[1]))
+                        file_ln.write("%f\t%f\t%f\t%f\t" %(self.DSSLines.Rmatrix[4], self.DSSLines.Rmatrix[2], self.DSSLines.Rmatrix[5], self.DSSLines.Rmatrix[8]))
+                        file_ln.write("%f\t%f\t%f\t%f\t" %(self.DSSLines.Xmatrix[0], self.DSSLines.Xmatrix[1], self.DSSLines.Xmatrix[4], self.DSSLines.Xmatrix[2]))
+                        file_ln.write("%f\t%f\n" %(self.DSSLines.Xmatrix[5], self.DSSLines.Xmatrix[8]))
+                        line_ind += 1
+                    # 1-Phase Line
+                    if self.DSSLines.phases == 1:
+                        a = self.DSSLines.Bus1
+                        try:
+                            ph = a.split('.') 
+                            ph = int(ph[1])
+                        except:
+                            ph = 1
+                        null = 0.
+                        if ph == 1:                        
+                            file_ln.write("%d\t" %(line_ind) + "LINE " + self.DSSLines.Name.ljust(8) + "%d\t" %(self.DSSLines.Phases)+ "%.4f\t" %(self.DSSLines.Length))
+                            file_ln.write(row[1].ljust(len(longest)+5) + row[2].ljust(len(longest)+5) + "%f\t%f\t" %(self.DSSLines.Rmatrix[0], null))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(null, null, null, null))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(self.DSSLines.Xmatrix[0], null, null, null))
+                            file_ln.write("%f\t%f\n" %(null, null))
+                            line_ind += 1
+                        if ph == 2:                        
+                            file_ln.write("%d\t" %(line_ind) + "LINE " + self.DSSLines.Name.ljust(8) + "%d\t" %(self.DSSLines.Phases)+ "%.4f\t" %(self.DSSLines.Length))
+                            file_ln.write(row[1].ljust(len(longest)+5) + row[2].ljust(len(longest)+5) + "%f\t%f\t" %(null, null))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(self.DSSLines.Rmatrix[0], null, null, null))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(null, null, self.DSSLines.Xmatrix[0], null))
+                            file_ln.write("%f\t%f\n" %(null, null))
+                            line_ind += 1
+                        if ph == 3:                        
+                            file_ln.write("%d\t" %(line_ind) + "LINE " + self.DSSLines.Name.ljust(8) + "%d\t" %(self.DSSLines.Phases)+ "%.4f\t" %(self.DSSLines.Length))
+                            file_ln.write(row[1].ljust(len(longest)+5) + row[2].ljust(len(longest)+5) + "%f\t%f\t" %(null, null))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(null, null, null, self.DSSLines.Rmatrix[0]))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(null, null, null, null))
+                            file_ln.write("%f\t%f\n" %(null, self.DSSLines.Xmatrix[0]))
+                            line_ind += 1
+                    # 2-Phase line
+                    if self.DSSLines.phases == 2:
+                        a = self.DSSLines.Bus1
+                        ph = a.split('.') 
+                        ph = (ph[1] + ph[2])
+                        null = 0.
+                        if ph == '12':                        
+                            file_ln.write("%d\t" %(line_ind) + "LINE " + self.DSSLines.Name.ljust(8) + "%d\t" %(self.DSSLines.Phases)+ "%.4f\t" %(self.DSSLines.Length))
+                            file_ln.write(row[1].ljust(len(longest)+5) + row[2].ljust(len(longest)+5) + "%f\t%f\t" %(self.DSSLines.Rmatrix[0], self.DSSLines.Rmatrix[1]))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(self.DSSLines.Rmatrix[3], null, null, null))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(self.DSSLines.Xmatrix[0], self.DSSLines.Xmatrix[1], self.DSSLines.Xmatrix[3], null))
+                            file_ln.write("%f\t%f\n" %(null, null))
+                            line_ind += 1
+                        if ph == '13':                        
+                            file_ln.write("%d\t" %(line_ind) + "LINE " + self.DSSLines.Name.ljust(8) + "%d\t" %(self.DSSLines.Phases)+ "%.4f\t" %(self.DSSLines.Length))
+                            file_ln.write(row[1].ljust(len(longest)+5) + row[2].ljust(len(longest)+5) + "%f\t%f\t" %(self.DSSLines.Rmatrix[0], null))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(null, self.DSSLines.Rmatrix[1], null, self.DSSLines.Rmatrix[3]))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(self.DSSLines.Xmatrix[0], null, null, self.DSSLines.Xmatrix[1]))
+                            file_ln.write("%f\t%f\n" %(null, self.DSSLines.Xmatrix[3]))
+                            line_ind += 1
+                        if ph == '23':                        
+                            file_ln.write("%d\t" %(line_ind) + "LINE " + self.DSSLines.Name.ljust(8) + "%d\t" %(self.DSSLines.Phases)+ "%.4f\t" %(self.DSSLines.Length))
+                            file_ln.write(row[1].ljust(len(longest)+5) + row[2].ljust(len(longest)+5) + "%f\t%f\t" %(null, null))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(self.DSSLines.Rmatrix[0], null, self.DSSLines.Rmatrix[1], self.DSSLines.Rmatrix[3]))
+                            file_ln.write("%f\t%f\t%f\t%f\t" %(null, null, self.DSSLines.Xmatrix[0], null))
+                            file_ln.write("%f\t%f\n" %(self.DSSLines.Xmatrix[1], self.DSSLines.Xmatrix[3]))
+                            line_ind += 1                             
         file_ln.write("-999 \n")
 
         # Fill GENERATOR data in txt file
@@ -342,11 +421,13 @@ class Data:
 
 if __name__ == '__main__':
 
-    # Change the following path to your OpenDSS Master File
+    # Change the following path to your OpenDSS Master File. Also alter the following two lines based on single or three phase circuit
+    # Single or Three phase circuit
     d1 = Data(fr"C:\Users\Auser\Desktop\Shiva\D-OPF\IEEE-123-Bus\Master-IEEE-123.dss")
     # d1 = Data(fr"C:\Users\Auser\Desktop\Shiva\D-OPF\IEEE-123-Bus-3Phase\IEEE123Master.dss")
+    # Open txt files
     f1 = open("ieee123_Elements.txt","r")
     f2 = open("ieee123_Buses.txt","r")
     f3 = open("ieee123_EXP_LOADS.csv","r")
-
-    d1.Extract_Data(f1, f2, f3)
+    f4 = open("ieee123_Power_elem_kVA.txt","r")
+    d1.Extract_Data(f1, f2, f3, f4)
